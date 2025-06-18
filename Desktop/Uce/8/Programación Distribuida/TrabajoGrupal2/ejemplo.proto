@@ -1,0 +1,19 @@
+// ejemplo.proto
+syntax = "proto3";
+
+package ejemplo;
+
+// Definimos el servicio con un RPC SayHello
+service HelloService {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// Mensaje de solicitud: enviamos un nombre
+message HelloRequest {
+  string name = 1;
+}
+
+// Mensaje de respuesta: recibimos el saludo
+message HelloReply {
+  string message = 1;
+}
